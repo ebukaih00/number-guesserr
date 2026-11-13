@@ -2,20 +2,31 @@
 let randomnumber = Math.floor(Math.random() * 101)
 let feedbackEl = document.getElementById("feedback")
 
-function submit(){
-let inputEl = document.getElementById("input-el").value;
-let value = Number(inputEl)
 
-    if( value === randomnumber){
-feedbackEl.textContent = "correct"
+function submit() {
+    let inputEl = document.getElementById("input-el").value;
+    
+    let value = Number(inputEl)
+
+
+
+   
+     if (inputEl === "" ){
+       return  feedbackEl.textContent = "no value entered"
     }
-    else if(value<randomnumber){
+
+
+    if (value === randomnumber) {
+        feedbackEl.textContent = "correct"
+    }
+    else if (value < randomnumber) {
         feedbackEl.textContent = "go higher"
     }
 
-    else if (value>randomnumber){
+    else if (value > randomnumber) {
         feedbackEl.textContent = "go lower"
     }
+
 }
 
 
