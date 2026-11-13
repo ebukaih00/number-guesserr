@@ -7,11 +7,10 @@ function submit() {
     let inputEl = document.getElementById("input-el").value;
     
     let value = Number(inputEl)
-
-
+    value.trim
 
    
-     if (inputEl === "" ){
+     if (inputEl.trim() === "" ){
        return  feedbackEl.textContent = "no value entered"
     }
 
